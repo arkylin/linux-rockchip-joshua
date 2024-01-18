@@ -4,9 +4,9 @@
 
 pkgbase=linux-rockchip-joshua
 pkgname=("${pkgbase}"{,-headers})
-_kernelver=5.10.160
-_patchver=28
-_tag="${_kernelver}-${_patchver}"
+_kernelver=5.10.198
+_patchver=1
+#_tag="${_kernelver}-${_patchver}"
 pkgver="${_kernelver}.${_patchver}"
 pkgrel=1
 arch=('aarch64')
@@ -17,7 +17,7 @@ makedepends=('cpio' 'xmlto' 'docbook-xsl' 'kmod' 'inetutils' 'bc' 'git' 'uboot-t
 options=('!strip')
 _srcname='linux-rockchip'
 source=(
-  "git+${url}/${_srcname}.git#tag=${_tag}"
+  "git+${url}/${_srcname}.git#branch=rkr7.1"
   '01-gcc-wrapper.patch'
   'linux.preset'
 )

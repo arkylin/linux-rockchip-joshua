@@ -1,5 +1,5 @@
 pkgbase = linux-rockchip-joshua
-	pkgver = 5.10.160.28
+	pkgver = 5.10.198.1
 	pkgrel = 1
 	url = https://github.com/Joshua-Riek
 	arch = aarch64
@@ -15,7 +15,7 @@ pkgbase = linux-rockchip-joshua
 	makedepends = vboot-utils
 	makedepends = dtc
 	options = !strip
-	source = git+https://github.com/Joshua-Riek/linux-rockchip.git#tag=5.10.160-28
+	source = git+https://github.com/Joshua-Riek/linux-rockchip.git#branch=rkr7.1
 	source = 01-gcc-wrapper.patch
 	source = linux.preset
 	sha512sums = SKIP
