@@ -15,15 +15,16 @@ url="https://github.com/Joshua-Riek"
 _desc="with patches picked by Joshua Riek focusing on RK3588" 
 makedepends=('cpio' 'xmlto' 'docbook-xsl' 'kmod' 'inetutils' 'bc' 'git' 'uboot-tools' 'vboot-utils' 'dtc')
 options=('!strip')
-_srcname='linux-rockchip'
+_reponame='linux-rockchip'
+_srcname="${_reponame}-${_tag}"
 source=(
-  "git+${url}/${_srcname}.git#tag=${_tag}"
+  "${_srcname}.tar.gz::${url}/${_reponame}/archive/refs/tags/${_tag}.tar.gz"
   '01-gcc-wrapper.patch'
   'linux.preset'
 )
 
 sha512sums=(
-  'SKIP'
+  '971bffa300ba775a23483c99df26afb7ca3e6486b931fb550d9b4362321d6bb730ed644647e1750bb640ba5f5ec2148b206ec35532dfc45d5b7ef196a927ce69'
   'a2daf21e3df0a0a50b0e81f4a163754acc08fb1104b875560a984123ccb83c31bd6fd47951e666faaa73723a400766cf9350b13d4ec0d566183f81cff03a68d8'
   '2dc6b0ba8f7dbf19d2446c5c5f1823587de89f4e28e9595937dd51a87755099656f2acec50e3e2546ea633ad1bfd1c722e0c2b91eef1d609103d8abdc0a7cbaf'
 )
